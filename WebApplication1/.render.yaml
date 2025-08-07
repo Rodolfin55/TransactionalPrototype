@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: transactional-prototype
+    name: TransactionalPrototype
     env: docker
     plan: free
     repo: https://github.com/Rodolfin55/TransactionalPrototype
