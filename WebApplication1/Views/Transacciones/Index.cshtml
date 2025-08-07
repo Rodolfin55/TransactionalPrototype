@@ -1,0 +1,35 @@
+﻿@model List<TuProyecto.Models.Transaccion>
+@{
+    ViewData["Title"] = "Listado de Transacciones";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (TempData["Mensaje"] != null)
+{
+    <div class="alert alert-success">@TempData["Mensaje"]</div>
+}
+
+<a class="btn btn-primary mb-3" asp-action="Create">+ Nueva Transacción</a>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Descripción</th>
+            <th>Monto</th>
+            <th>Fecha</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var trans in Model)
+        {
+            <tr>
+                <td>@trans.Id</td>
+                <td>@trans.Descripcion</td>
+                <td>@trans.Monto.ToString("C")</td>
+                <td>@trans.FechaTransaccion.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+</table>
