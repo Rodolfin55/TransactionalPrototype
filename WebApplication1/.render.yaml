@@ -3,5 +3,6 @@ services:
     name: transactional-prototype
     env: docker
     plan: free
+    repo: https://github.com/Rodolfin55/TransactionalPrototype
     branch: main
-    dockerfilePath: Dockerfile
+    rootDir: .
