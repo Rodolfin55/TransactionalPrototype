@@ -16,3 +16,4 @@ COPY --from=build /app/out .
 
 # Reemplaza TransactionalPrototype.dll por el nombre correcto si es distinto
 ENTRYPOINT ["dotnet", "WebApplication1.dll"]
+
